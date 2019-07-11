@@ -29,6 +29,6 @@ class Solution(object):
             cur = node
         # l1或l2剩余元素的元素加进来：
         cur.next = l1 or l2
-        return root.next    #头节点是空所以不要它
+        return root.next    # 头节点是空所以不要它
 
 
