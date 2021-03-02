@@ -25,11 +25,7 @@ var searchInsert = function(nums, target) {
     while (true) {
         const len = arr.length;
         if (len === 1) {
-            if (arr[0] >= target) {
-                return result;
-            } else {
-                return result+1;
-            }
+            return arr[0]>=target ? result : result+1;
         }
         if (len === 2) {
             const a = arr[0];
