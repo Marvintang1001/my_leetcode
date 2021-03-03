@@ -7,6 +7,7 @@
 
 #### easy:
     - 35：搜索插入位置
+    - 27：（移除元素）
 
 #### medium:
     - ★15: 3sum（三数之和）
@@ -17,7 +18,6 @@
 
 
 2. https://github.com/youngyangyang04/leetcode-master
-    - 27：（移除元素）
     - 209：（长度最小的子数组）
     - 59：（螺旋矩阵II）
 
