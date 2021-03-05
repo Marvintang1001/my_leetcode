@@ -4,14 +4,16 @@
 链表类都放在linked_list文件夹里
 
 ### 数组类：
+    文章：https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
 
 #### easy:
     - 35：搜索插入位置
-    - 27：（移除元素）
+    - 27：移除元素
 
 #### medium:
     - ★15: 3sum（三数之和）
     - ★209：长度最小的子数组（滑动窗口）
+    - ★59：螺旋矩阵II（边界碰撞，别人写的总是那么精简）
 
 #### 待完成：
 1. cookbook:
@@ -19,7 +21,6 @@
 
 
 2. https://github.com/youngyangyang04/leetcode-master
-    - 59：（螺旋矩阵II）
 
 
 3. 补充：

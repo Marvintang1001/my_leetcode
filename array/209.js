@@ -1,4 +1,4 @@
-/** 209. 长度最小的子数组
+/** 209(medium). 长度最小的子数组
  * 给定一个含有 n 个正整数的数组和一个正整数 target 。
  * 找出该数组中满足其和 ≥ target 的长度最小的连续子数组 [numsl, numsl+1, ..., numsr-1, numsr]，
  * 并返回其长度。如果不存在符合条件的子数组，返回 0 。
@@ -54,9 +54,9 @@ var minSubArrayLen = function(target, nums) {
 
 
 /** 滑动窗口解法：https://mp.weixin.qq.com/s/UrZynlqi4QpyLlLhBPglyg
- * @param {number} target
- * @param {number[]} nums
- * @return {number}
+ * 扩张窗口：为了找到一个可行解，找到了就不再扩张，扩张不再有意义。
+ * 收缩窗口：在长度上优化该可行解，直到条件被破坏。
+ * 继续寻找下一个可行解，然后再优化到不能优化…
  */
 var answer = function(s, nums) {
     let minLen = Infinity;  // p.s: 一开始这个值设为0不利于后面取最小值
