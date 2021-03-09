@@ -1,7 +1,3 @@
-"""
-my blog: https://www.cnblogs.com/marvintang1001/p/11171779.html
-
-"""
 
 
 # Definition for singly-linked list.

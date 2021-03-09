@@ -1,7 +1,6 @@
 # my_leetcode
 努力进步！💪
 
-链表类都放在linked_list文件夹里
 
 ### 数组类：
     文章：https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
@@ -35,6 +34,7 @@
 
 #### easy:
     - 203：移除链表元素（加一个空节点在头部方便解答）
+    - 206：反转链表（迭代或递归）
 
 #### medium:
     - ★707：设计链表（js用对象实现双向链表）

@@ -1,7 +1,4 @@
-"""
-my blog:https://www.cnblogs.com/marvintang1001/p/11173546.html
 
-"""
 
 # Definition for singly-linked list.
 class ListNode(object):
