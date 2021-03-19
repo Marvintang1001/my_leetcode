@@ -12,19 +12,11 @@ const iconv = require('iconv-lite');
  * @param {string} data
  * @returns {ArrayBuffer} 
  */
-function makeBuffer (data) {
-    const dataChunk = [];
-    for (let i=0;i<data.length;i=i+2) {
-        const a = data.slice(i, i+2);
-        dataChunk.push('0x'+a);
-    }
-    return Buffer.from(dataChunk);
-}
 
 function cliCodingTest () {
     const hexString = "2b462c30303130313030302c32302f30312f30332030353a34363a34352c2cb5e7d4b4b9cad5cf2c31bac5d6f7bbfab1b8b5e7b9cad5cf0d0a";
     const test = '+F,00101000,20/01/03 05:46:45,,电源故障,1号主机备电故障';
-    const gbkBuffer = makeBuffer(hexString);
+    const gbkBuffer = Buffer.from(hexString, 'hex');
     // console.log('gbkBuffer:', gbkBuffer);
     const gbkString = iconv.decode(gbkBuffer, 'GBK');
     // console.log('gbkString:', gbkString);
