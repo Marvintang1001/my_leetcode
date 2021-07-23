@@ -1,6 +1,10 @@
 # my_leetcode
 努力进步！💪
+刷题流程：数组-> 链表-> 哈希表->字符串->栈与队列->树->回溯->贪心->动态规划->图论->高级数据结构
+https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247486267&idx=1&sn=614e6799fcbda82c268bf28ff6fe5b22&chksm=f9a2386aced5b17cc3edad231b6001b3319a2cb6fa6ba7ee37673fec51624555f161a9688ee3&scene=178&cur_album_id=1485825793120387074#rd
 
+### 性能分析
+    - 递归的时间复杂度：x^n的递归
 
 ### 数组类：
     文章：https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
@@ -67,8 +71,22 @@
 
 #### easy:
     - 344：反转字符串
+    - 541.反转字符串II
 
 #### medium:
     - 151：翻转字符串里的单词（正则）
 
 #### 待完成：
+    - KMP
+
+### 栈与队列类：
+    文章：
+
+#### easy:
+    - 232：用栈实现队列（python）
+
+#### medium:
+    - 
+
+#### 待完成：
+    - 225：用队列实现栈
