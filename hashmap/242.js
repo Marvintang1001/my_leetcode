@@ -37,4 +37,30 @@ var isAnagram = function(s, t) {
     return !zeroArr;
 };
 
-console.log('result:', isAnagram('anagram', 'nagaram'));
+// console.log('result:', isAnagram('anagram', 'nagaram'));
+
+
+/**
+ * 数组形式的哈希表
+ * 如：'apple'
+ *   a   p   l   e
+ * ---------------
+ * | 1 | 2 | 1 | 1 |
+ * ----------------
+*/ 
+var isAnagram2 = function(s, t) {
+    const arr = new Array(26);
+    arr.fill(0);
+    // a的ascii编码为97
+    s.split('').map(x => {
+        const num = x.charCodeAt() - 97;
+        arr[num] += 1;
+    })
+    t.split('').map(x => {
+        const num = x.charCodeAt() - 97;
+        arr[num] -= 1;
+    })
+    return arr.filter(x => x != 0).length == 0;
+}
+
+console.log('result:', isAnagram2('anagram', 'nagaram'))

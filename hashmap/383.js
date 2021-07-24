@@ -42,3 +42,6 @@ var canConstruct = function(ransomNote, magazine) {
 };
 
 console.log('result:', canConstruct('a', 'b'));
+
+
+// 242 数组哈希解法性能更优

@@ -37,3 +37,5 @@ var intersection = function(nums1, nums2) {
 };
 
 console.log('result:', intersection([4,9,5], [9,4,9,8,4]));
+
+// 本题在于用set模拟哈希表查重

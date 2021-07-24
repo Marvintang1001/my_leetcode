@@ -25,7 +25,6 @@
 
 
 /** 成绩一般，时间28%和空间72%
- * 可能更快的解决办法：快慢指针
  * @param {number} n
  * @return {boolean}
  */
@@ -47,4 +46,28 @@ var isHappy = function(n) {
     }
 };
 
-console.log('result:', isHappy(19));
+// console.log('result:', isHappy(19));
+
+
+/**
+ * 题目中说了会 「无限循环」，那么也就是说「求和的过程中，sum会重复出现，这对解题很重要！
+ * 当我们遇到了要快速判断一个元素是否出现集合里的时候，就要考虑哈希法(Set)了。
+ * 使用哈希法，来判断这个sum是否重复出现，如果重复了就是return false， 否则一直找到sum为1为止。
+ */
+
+var isHappy2 = function(n) {
+    const setter = new Set();
+    let a = n;
+    while (true) {
+        const arr = a.toString().split('').map(x => parseInt(x));
+        a = arr.reduce((x, y) => x+y*y, 0);
+        if (a == 1) return true;
+        if (setter.has(a)) {
+            return false;
+        } else {
+            setter.add(a);
+        }
+    }
+}
+
+console.log('result:', isHappy2(19));
