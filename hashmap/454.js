@@ -118,7 +118,8 @@ const answer1 = function (A, B, C, D) {
 
  * 此外，for比forEach和reduce快的原因是：仅循环场景中，循环次数越多，for优势越明显
  */
-const answer2 = function (A, B, C, D, t, h = new Map, r = 0) {
+const answer2 = function (A, B, C, D, t) {
+    let h = new Map, r = 0
     for (var i = 0; i < A.length; i++) for (var j = 0; j < B.length; j++) h.set(t = 0 - A[i] - B[j], h.has(t) ? h.get(t) + 1 : 1)
     for (var i = 0; i < C.length; i++) for (var j = 0; j < D.length; j++) h.has(t = C[i] + D[j]) && (r += h.get(t))
     return r

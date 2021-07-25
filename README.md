@@ -16,6 +16,7 @@ https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247486267&idx=1&sn=614e67
 
 #### medium:
     - ★15: 3sum（三数之和）
+    - ★18: 4sum（四数之和）
     - ★209：长度最小的子数组（滑动窗口）
     - ★59：螺旋矩阵II（边界碰撞，别人写的总是那么精简）
 
@@ -67,14 +68,16 @@ https://mp.weixin.qq.com/s?__biz=MzUxNjY5NTYxNA==&mid=2247486267&idx=1&sn=614e67
 
 
 ### 字符串类：
-    文章：
+    文章：https://github.com/youngyangyang04/leetcode-master/blob/master/problems/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%80%BB%E7%BB%93.md
 
 #### easy:
     - 344：反转字符串
     - 541.反转字符串II
+    - J05.替换空格
+    - J58：左旋转字符串
 
 #### medium:
-    - 151：翻转字符串里的单词（正则）
+    - 151：翻转字符串里的单词（未完成最后一步）
 
 #### 待完成：
     - KMP

@@ -61,11 +61,71 @@ var reverseWords = function(s) {
 
 // console.log('result:', reverseWords(' a  good example'));
 
-/** 答案：time(25.2%), ram(62%)
- * 正则
+/* 正则
  * @param {string} s 
  */
 var answer = function (s) {
     return s.trim().split(/\s+/).reverse().join(' ');
 }
-console.log('result:', answer(' a  good example'));
+// console.log('result:', answer(' a  good example'));
+
+/** “反转再反转”
+ * 们将整个字符串都反转过来，那么单词的顺序指定是倒序了，只不过单词本身也倒叙了，那么再把单词反转一下，单词不就正过来了。
+ * 举个例子，源字符串为："the sky is blue "
+ * 移除多余空格 : "the sky is blue"
+ * 字符串反转："eulb si yks eht"
+ * 单词反转："blue is sky the"
+ * 还是双指针法
+ */
+
+function reverseStr (arr) {
+    // 翻转字符串 O(n)
+    let a = 0, b = arr.length - 1;
+    while (a < b) {
+        arr[a] = [arr[b], arr[b]=arr[a]][0];
+        a++;
+        b--;
+    }
+    return arr;
+}
+
+function reverseWords2 (s) {
+    let arr = s.split('');
+    arr = reverseStr(arr);
+    // 删除多余空格 快慢指针 O(n)
+    let c = 0, d = 0;
+    while (arr[d] == ' ' && d < arr.length) {
+        d++;
+    }
+    for (c;c<d;c++) {
+        arr.shift();
+    }
+    while (d < arr.length -1) {
+        if (arr[d] != ' ') {
+            c++;
+            d++;
+        } else {
+            while(arr[d] == ' ' && d < arr.length -1) {
+                d++;
+            }
+            arr.splice(c, d-c-1);
+            c = d;
+        }
+    }
+    if (arr[d] == ' ') arr.pop();
+    // 翻转单词 (这步有错)
+    let i=0, j=0;
+    let str = '';
+    while (j < arr.length -1) {
+        j++;
+        if(arr[j] == ' ' || j == arr.length) {
+            str = str + reverseStr(arr.slice(i, j-1)).join('');
+            if (j < arr.length) str = str + ' ';
+            i = j+1;
+        }
+    }
+    return str;
+    // return arr.join('');
+}
+
+console.log(reverseWords2(' a  good example  '));
